@@ -1,4 +1,4 @@
-# Smug_Fuck
+# Smug_Fuck - Bring your own dropper.
 
 
 File Smuggling HTML Smuggling techniques sidestep traditional network security solutions such as email scanners, proxies and sandboxes by using the features of HTML5 and Javascript. 
