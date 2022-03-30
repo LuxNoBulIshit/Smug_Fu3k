@@ -1,0 +1,6 @@
+#include "resource.h"
+
+
+BYTES_TEXT TEXTFILE "Res\\BYTES.txt"
+BASE64_TEXT TEXTFILE "Res\\BASE64.txt"
+Url_decode  TEXTFILE "Res\\Url_decode.txt"
