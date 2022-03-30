@@ -20,6 +20,10 @@ there is one obsfucation method:
 1)Url Decode (Utf-8).
 
 
+
+
+
+
 On_The_Road_Map:
 
 1) Add more Obfuscation technique (Speicaly Javascript obfuscation).
